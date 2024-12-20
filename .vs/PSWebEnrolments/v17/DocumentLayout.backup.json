@@ -1,0 +1,260 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "Z:\\\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD63564D-6B99-43F5-8524-1BE20A24DA2F}|http://localhost:50085|\\\\ms-breda\\ps web enrolments\\webcontrols\\checkout_supporting_you_gcfe.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD63564D-6B99-43F5-8524-1BE20A24DA2F}|http://localhost:50085|\\\\ms-breda\\ps web enrolments\\webcontrols\\checkout_supporting_you_gcfe.ascx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD63564D-6B99-43F5-8524-1BE20A24DA2F}|http://localhost:50085|\\\\ms-breda\\ps web enrolments\\webcontrols\\checkout_photo_gcfe.ascx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD63564D-6B99-43F5-8524-1BE20A24DA2F}|http://localhost:50085|\\\\ms-breda\\ps web enrolments\\webcontrols\\checkout_photo_gcfe.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD63564D-6B99-43F5-8524-1BE20A24DA2F}|http://localhost:50085|\\\\ms-breda\\ps web enrolments\\webcontrols\\checkout_personal_details_gcfe.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD63564D-6B99-43F5-8524-1BE20A24DA2F}|http://localhost:50085|\\\\ms-breda\\ps web enrolments\\content\\gcfe.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD63564D-6B99-43F5-8524-1BE20A24DA2F}|http://localhost:50085|\\\\ms-breda\\ps web enrolments\\scripts\\gcfe.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD63564D-6B99-43F5-8524-1BE20A24DA2F}|http://localhost:50085|\\\\ms-breda\\ps web enrolments\\webcontrols\\courseapply_gcfe.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD63564D-6B99-43F5-8524-1BE20A24DA2F}|http://localhost:50085|\\\\ms-breda\\ps web enrolments\\webcontrols\\checkout_quals_on_entry_gcfe.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD63564D-6B99-43F5-8524-1BE20A24DA2F}|http://localhost:50085|\\\\ms-breda\\ps web enrolments\\webcontrols\\checkout_fees_gcfe.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD63564D-6B99-43F5-8524-1BE20A24DA2F}|http://localhost:50085|\\\\ms-breda\\ps web enrolments\\webcontrols\\checkout_employment_gcfe.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD63564D-6B99-43F5-8524-1BE20A24DA2F}|http://localhost:50085|\\\\ms-breda\\ps web enrolments\\webcontrols\\checkout_emergency_contacts_gcfe.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD63564D-6B99-43F5-8524-1BE20A24DA2F}|http://localhost:50085|\\\\ms-breda\\ps web enrolments\\webcontrols\\checkout_dataprotection_apponly_gcfe.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD63564D-6B99-43F5-8524-1BE20A24DA2F}|http://localhost:50085|\\\\ms-breda\\ps web enrolments\\webcontrols\\checkout_attachments_gcfe.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD63564D-6B99-43F5-8524-1BE20A24DA2F}|http://localhost:50085|\\\\ms-breda\\ps web enrolments\\webcontrols\\checkout_employment_gcfe.ascx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD63564D-6B99-43F5-8524-1BE20A24DA2F}|http://localhost:50085|\\\\ms-breda\\ps web enrolments\\webcontrols\\checkout_dataprotection_apponly_gcfe.ascx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD63564D-6B99-43F5-8524-1BE20A24DA2F}|http://localhost:50085|\\\\ms-breda\\ps web enrolments\\webcontrols\\checkout_personal_details_gcfe.ascx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "checkout_photo_GCFE.ascx.vb",
+              "DocumentMoniker": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_photo_GCFE.ascx.vb",
+              "ToolTip": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_photo_GCFE.ascx.vb",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAkwIMAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-12-19T16:50:36.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "gcfe.js",
+              "DocumentMoniker": "\\\\MS-BREDA\\PS Web Enrolments\\Scripts\\gcfe.js",
+              "ToolTip": "\\\\MS-BREDA\\PS Web Enrolments\\Scripts\\gcfe.js",
+              "ViewState": "AgIAADICAAAAAAAAAAAUwEoCAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-19T16:14:48.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "gcfe.css",
+              "DocumentMoniker": "\\\\MS-BREDA\\PS Web Enrolments\\content\\gcfe.css",
+              "ToolTip": "\\\\MS-BREDA\\PS Web Enrolments\\content\\gcfe.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-19T16:13:39.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "checkout_personal_details_GCFE.ascx",
+              "DocumentMoniker": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_personal_details_GCFE.ascx",
+              "ToolTip": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_personal_details_GCFE.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-08-06T13:07:14.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "checkout_photo_GCFE.ascx",
+              "DocumentMoniker": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_photo_GCFE.ascx",
+              "ToolTip": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_photo_GCFE.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-12-19T16:03:00.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "courseapply_GCFE.ascx",
+              "DocumentMoniker": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\courseapply_GCFE.ascx",
+              "ToolTip": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\courseapply_GCFE.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-12-19T12:24:18.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "checkout_supporting_you_GCFE.ascx",
+              "DocumentMoniker": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_supporting_you_GCFE.ascx",
+              "ToolTip": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_supporting_you_GCFE.ascx*",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-12-19T16:06:12.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "checkout_supporting_you_GCFE.ascx.vb",
+              "DocumentMoniker": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_supporting_you_GCFE.ascx.vb",
+              "ToolTip": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_supporting_you_GCFE.ascx.vb",
+              "ViewState": "AgIAALcAAAAAAAAAAAAowCIBAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-06T13:25:18.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "checkout_quals_on_entry_GCFE.ascx",
+              "DocumentMoniker": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_quals_on_entry_GCFE.ascx",
+              "ToolTip": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_quals_on_entry_GCFE.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-12-19T16:05:52.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "checkout_fees_GCFE.ascx",
+              "DocumentMoniker": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_fees_GCFE.ascx",
+              "ToolTip": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_fees_GCFE.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-12-19T16:02:16.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "checkout_emergency_contacts_GCFE.ascx",
+              "DocumentMoniker": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_emergency_contacts_GCFE.ascx",
+              "ToolTip": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_emergency_contacts_GCFE.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-12-19T16:01:44.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "checkout_employment_GCFE.ascx",
+              "DocumentMoniker": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_employment_GCFE.ascx",
+              "ToolTip": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_employment_GCFE.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-12-19T12:22:42.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "checkout_attachments_GCFE.ascx",
+              "DocumentMoniker": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_attachments_GCFE.ascx",
+              "ToolTip": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_attachments_GCFE.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-12-19T16:00:59.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "checkout_employment_GCFE.ascx.vb",
+              "DocumentMoniker": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_employment_GCFE.ascx.vb",
+              "ToolTip": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_employment_GCFE.ascx.vb",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAYwLIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-11-07T10:34:34.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "checkout_dataprotection_apponly_GCFE.ascx",
+              "DocumentMoniker": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_dataprotection_apponly_GCFE.ascx",
+              "ToolTip": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_dataprotection_apponly_GCFE.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-08-09T15:28:20.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "checkout_personal_details_GCFE.ascx.vb",
+              "DocumentMoniker": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_personal_details_GCFE.ascx.vb",
+              "ToolTip": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_personal_details_GCFE.ascx.vb",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAAAFMAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-06T13:10:03.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "checkout_dataprotection_apponly_GCFE.ascx.vb",
+              "DocumentMoniker": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_dataprotection_apponly_GCFE.ascx.vb",
+              "ToolTip": "\\\\MS-BREDA\\PS Web Enrolments\\webcontrols\\checkout_dataprotection_apponly_GCFE.ascx.vb",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAowEgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-09T15:28:21.853Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

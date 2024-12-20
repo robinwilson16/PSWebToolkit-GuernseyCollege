@@ -1,0 +1,158 @@
+body {
+    background-color: #808080;
+}
+
+.White {
+    background-color: #FFFFFF;
+}
+
+.TopLogo img {
+    max-height: 200px;
+}
+
+.ErrorInput input {
+    border: 1px solid red;
+}
+
+span.error {
+    color: #F44336;
+}
+
+.FreeCourse {
+    background-color: #689F38;
+    border-radius: .25rem;
+    padding: .3rem;
+    color: #FFFFFF;
+}
+
+.NonFreeCourse {
+    background-color: #D32F2F;
+    border-radius: .25rem;
+    padding: .3rem;
+    color: #FFFFFF;
+}
+
+.FeeUnknownCourse {
+    background-color: #455A64;
+    border-radius: .25rem;
+    padding: .3rem;
+    color: #FFFFFF;
+}
+
+.btn-primary {
+    background-color: #4EAD33;
+    border: 1px solid #4EAD33;
+    min-width: 180px;
+}
+
+.btn-primary:hover {
+    background-color: #e5007d;
+    border: 1px solid #e5007d;
+}
+
+.btn-secondary {
+    background-color: #e5007d;
+    border: 1px solid #e5007d;
+    min-width: 180px;
+}
+
+.progress .progress-bar {
+    background-color: #4EAD33;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+input,
+input.valid {
+    border-color: #ccc;
+}
+
+input[type=checkbox] {
+    margin-right: 10px;
+}
+
+.DeclarationText {
+    max-height: 260px;
+    overflow: auto;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+}
+
+.grid-container-checkbox {
+    display: grid;
+    grid-template-columns: 40px auto;
+    column-gap: 20px;
+}
+
+.grid-item-checkbox {
+    margin-top: -30px;
+}
+
+.list-group .active {
+    background-color: #4EAD33;
+    border: 1px solid #4EAD33;
+}
+
+.bd-callout-gcfe {
+    border-left-color: #4EAD33 !important;
+}
+
+.bd-callout-gcfe-warning {
+    border-left-color: #FF6F00 !important;
+}
+
+.bd-callout-gcfe-success {
+    border-left-color: #1B5E20 !important;
+}
+
+.bd-callout .list-group .icon::before {
+    display: inline-block !important;
+    text-rendering: auto !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+.bd-callout .list-group .listcheck::before {
+    font: var(--fa-font-solid) !important;
+    content: '\f14a' !important;
+}
+
+.bd-callout-grey {
+    background-color: #f5f5f5;
+}
+
+.bd-callout-fees {
+    background-color: #FFECB3;
+}
+
+.bd-callout-thankyou {
+    background-color: #C8E6C9;
+}
+
+    .bd-callout-grey h4,
+    .bd-callout-fees h4,
+    .bd-callout-thankyou h4 {
+        margin-bottom: 1em;
+        display: block;
+        color: #4EAD33;
+    }
+
+.bd-callout-fees h4 {
+    color: #FF6F00 !important;
+}
+
+.bd-callout-thankyou h4 {
+    color: #1B5E20 !important;
+}
+
+.text-uppercase {
+      letter-spacing: 0.15em;
+}

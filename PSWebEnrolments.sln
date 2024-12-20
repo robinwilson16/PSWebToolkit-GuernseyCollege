@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PS Web Enrolments", "http://localhost:50085", "{AD63564D-6B99-43F5-8524-1BE20A24DA2F}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50085"
+		Debug.AspNetCompiler.PhysicalPath = "\\MS-BREDA\PS Web Enrolments\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50085\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50085"
+		Release.AspNetCompiler.PhysicalPath = "\\MS-BREDA\PS Web Enrolments\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50085\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "\\MS-BREDA\PS Web Enrolments\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD63564D-6B99-43F5-8524-1BE20A24DA2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD63564D-6B99-43F5-8524-1BE20A24DA2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C999EA2-2D71-492B-8D40-2C0AD9C1917F}
+	EndGlobalSection
+EndGlobal

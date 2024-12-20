@@ -1,0 +1,45 @@
+﻿<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<p>
+	<span class="translation">LANGUAGES.ADDRESS_CAPTURE.FinalCaptureAddress</span>
+</p>
+<table style="margin:0px;width:100%">
+	<tbody>
+		<tr id="QASCapture_QASTableContent">
+		</tr>
+	</tbody>		
+</table>
+<p></p>
+<p></p>
+<p></p>
+<input type="button" style="width:120px;" class="translation" value="LANGUAGES.ADDRESS_CAPTURE.ButtonSearchAgain" onclick="parent.location = 'webenrolment.aspx?page=~/webcontrols/address_QASProOnDemand.ascx'"/>
+<input type="button" id="btnPost" value="Continue" />
+
+<script type="text/javascript">
+    $(function () {
+        $("#btnPost").bind("click", function () {
+
+            var $form = $("<form/>").attr("id", "data_form")
+                            .attr("action", "webenrolment.aspx?page=~/webcontrols/address_QASProOnDemandProcess.ascx")
+                            .attr("method", "post");
+            $("body").append($form);
+
+
+            AddParameter($form, "address1", $("#addLine0").text());
+            AddParameter($form, "address2", $("#addLine1").text());
+            AddParameter($form, "address3", $("#addLine2").text());
+            AddParameter($form, "address4", $("#addLine3").text());
+            AddParameter($form, "postcode", $("#addLine4").text());
+            AddParameter($form, "country", $("#country").text());
+
+
+            $form[0].submit();
+        });
+    });
+    function AddParameter(form, name, value) {
+        var $input = $("<input/>").attr("type", "hidden")
+                                .attr("name", name)
+                                .attr("value", value);
+        form.append($input);
+    }
+</script>

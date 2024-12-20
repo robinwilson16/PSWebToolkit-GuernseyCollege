@@ -1,0 +1,38 @@
+﻿<form onsubmit="javascript:return false;">
+	<p>
+		<span class="translation">LANGUAGES.ADDRESS_CAPTURE.PleaseSelectACountryOrDatamap</span>
+		<br>
+	</p>
+	<table style="margin-left:0px;width:100%">
+		<tbody>
+			<tr>
+				<!--  Workaround the height for hidden element is not calculated when loading overlay is shown -->
+				<td height="30px">
+					&nbsp;<select id='QASCapture_Datamap'>
+					</select>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	
+	<div id="QASCapture_PromptDiv">
+		<br><br>
+		<span class="translation">LANGUAGES.ADDRESS_CAPTURE.EnterTheAddressElementsRequestedBelow</span>
+		<br><br><br>
+		 
+		<table id="QASCapture_QASTable"  style="margin:0px;width:100%">
+			<tr>
+				<td colspan="3">
+					<P>
+						<br>
+						<br>
+						<a id="QASCapture_HyperlinkAlternate" href="#" onclick="addresscapture_InputController.alternatelLinkPressed()"><span class="translation">LANGUAGES.ADDRESS_CAPTURE.IfYouDoNotKnowThePostalCode</span></a>
+					</P>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<input name='ButtonNext' type='submit' onclick='addresscapture_InputController.nextButtonPressed()' class='translation' value='LANGUAGES.ADDRESS_CAPTURE.ButtonNext' />
+</form>

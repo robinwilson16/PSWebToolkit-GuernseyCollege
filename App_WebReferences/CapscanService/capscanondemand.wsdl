@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/AbstractTypes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand">
+      <s:element name="GetDatasets">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ac" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatasetsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDatasetsResult" type="tns:DSGlist" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DSGlist">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RequestStatus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSGCtr" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSGs" type="tns:ArrayOfDSGElement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDSGElement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DSGElement" type="tns:DSGElement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DSGElement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="query">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ac" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AmbiguityId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lookfor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MaxReturns" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DSGID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FieldList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ParamList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAppID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="queryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="queryResult" type="tns:ResponseGrp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseGrp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RequestStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressStatus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSG" type="tns:DSGElement" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionsCtr" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Options" type="tns:ArrayOfAmbiguousElement" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataCtr" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataLines" type="tns:ArrayOfDataElement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAmbiguousElement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AmbiguousElement" type="tns:AmbiguousElement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AmbiguousElement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="value" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="text" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDataElement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DataElement" type="tns:DataElement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DataElement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Display" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Group" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPoolInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sCC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDatasets" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nTimeout" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPoolInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPoolInfoResult" type="tns:strMapRet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="strMapRet">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sRet" type="tns:ArrayOfStrVal" />
+          <s:element minOccurs="0" maxOccurs="1" name="sDelName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sDelVal" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="lError" type="tns:ErrorLog" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfStrVal">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="strVal" type="tns:strVal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="strVal">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sValue" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ErrorLog">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sErrorString" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="nErrorNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="bRet" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetColumns">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sCC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDatasets" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDelimited" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="leFieldType" type="tns:eFieldType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="eFieldType">
+        <s:restriction base="s:string">
+          <s:enumeration value="eDisplayName" />
+          <s:enumeration value="eDataFieldName" />
+          <s:enumeration value="eDataFieldCmd" />
+          <s:enumeration value="eNoFilterCmd" />
+          <s:enumeration value="eCustomAddressFormatCmd" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetColumnsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetColumnsResult" type="tns:strRet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="strRet">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sRet" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="sDelRet" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="lError" type="tns:ErrorLog" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFieldInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sCC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDatasets" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFieldName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="eFieldInfo" type="tns:eFieldInfoConstants" />
+            <s:element minOccurs="1" maxOccurs="1" name="nTimeout" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDelimited" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="eFieldInfoConstants">
+        <s:restriction base="s:string">
+          <s:enumeration value="eFldDesc" />
+          <s:enumeration value="eFldFlags" />
+          <s:enumeration value="eFldMaxInp" />
+          <s:enumeration value="eFldMaxOut" />
+          <s:enumeration value="eFldPerm" />
+          <s:enumeration value="eFldSrc" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetFieldInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetFieldInfoResult" type="tns:strRet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sCC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDatasets" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="eSearchType" type="tns:eSearchTypeConstants" />
+            <s:element minOccurs="0" maxOccurs="1" name="aSelect" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDelimited" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aQueryString" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="nTimeout" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAppID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="eSearchTypeConstants">
+        <s:restriction base="s:string">
+          <s:enumeration value="eAddressKeyLookup" />
+          <s:enumeration value="eBrowse" />
+          <s:enumeration value="eCompanySearch" />
+          <s:enumeration value="eCrossMatch" />
+          <s:enumeration value="eFocus" />
+          <s:enumeration value="eHouseSearch" />
+          <s:enumeration value="ePostcodeLookup" />
+          <s:enumeration value="ePostcodeSearch" />
+          <s:enumeration value="eQuickBrowse" />
+          <s:enumeration value="eSelect" />
+          <s:enumeration value="eSingleSearch" />
+          <s:enumeration value="eStreetSearch" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSearchResult" type="tns:strMapRet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSearchString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sCC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDatasets" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="eSearchType" type="tns:eSearchTypeConstants" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSelect" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDelimited" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sQueryString" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nTimeout" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAppID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSearchStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSearchStringResult" type="tns:strMapRet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRemainingLookUps">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sCC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDatasets" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRemainingLookUpsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetRemainingLookUpsResult" type="tns:strLookUps" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="strLookUps">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Detail" type="tns:ArrayOfLookUpsDetails" />
+          <s:element minOccurs="1" maxOccurs="1" name="bRet" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfLookUpsDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LookUpsDetails" type="tns:LookUpsDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LookUpsDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sNumberOfRemainingLookups" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sClientName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dLicense_From" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sLicense_Clicks" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dExpirationDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sDatasets" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetParam">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sCC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDatasets" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDelimited" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sParamLookup" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetParamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetParamResult" type="tns:strParamsInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="strParamsInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="lstrSectionParamsInfo" type="tns:ArrayOfStrSectionParams" />
+          <s:element minOccurs="1" maxOccurs="1" name="lErrorLog" type="tns:ErrorLog" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfStrSectionParams">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="strSectionParams" type="tns:strSectionParams" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="strSectionParams">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sSection" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strEntry" type="tns:ArrayOfStrVal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DSGlist" type="tns:DSGlist" />
+      <s:element name="ResponseGrp" type="tns:ResponseGrp" />
+      <s:element name="strMapRet" type="tns:strMapRet" />
+      <s:element name="strRet" type="tns:strRet" />
+      <s:element name="strLookUps" type="tns:strLookUps" />
+      <s:element name="strParamsInfo" type="tns:strParamsInfo" />
+    </s:schema>
+    <s:schema targetNamespace="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDatasetsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatasets" />
+  </wsdl:message>
+  <wsdl:message name="GetDatasetsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatasetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="querySoapIn">
+    <wsdl:part name="parameters" element="tns:query" />
+  </wsdl:message>
+  <wsdl:message name="querySoapOut">
+    <wsdl:part name="parameters" element="tns:queryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPoolInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPoolInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPoolInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPoolInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetColumnsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetColumns" />
+  </wsdl:message>
+  <wsdl:message name="GetColumnsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetColumnsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFieldInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFieldInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetFieldInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFieldInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSearch" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchStringSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSearchString" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchStringSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSearchStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRemainingLookUpsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRemainingLookUps" />
+  </wsdl:message>
+  <wsdl:message name="GetRemainingLookUpsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRemainingLookUpsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetParamSoapIn">
+    <wsdl:part name="parameters" element="tns:GetParam" />
+  </wsdl:message>
+  <wsdl:message name="GetParamSoapOut">
+    <wsdl:part name="parameters" element="tns:GetParamResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatasetsHttpGetIn">
+    <wsdl:part name="cc" type="s:string" />
+    <wsdl:part name="ac" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDatasetsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DSGlist" />
+  </wsdl:message>
+  <wsdl:message name="queryHttpGetIn">
+    <wsdl:part name="cc" type="s:string" />
+    <wsdl:part name="ac" type="s:string" />
+    <wsdl:part name="AmbiguityId" type="s:string" />
+    <wsdl:part name="Lookfor" type="s:string" />
+    <wsdl:part name="MaxReturns" type="s:string" />
+    <wsdl:part name="DSGID" type="s:string" />
+    <wsdl:part name="FieldList" type="s:string" />
+    <wsdl:part name="ParamList" type="s:string" />
+    <wsdl:part name="sAppID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="queryHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResponseGrp" />
+  </wsdl:message>
+  <wsdl:message name="GetPoolInfoHttpGetIn">
+    <wsdl:part name="sCC" type="s:string" />
+    <wsdl:part name="sAC" type="s:string" />
+    <wsdl:part name="sDatasets" type="s:string" />
+    <wsdl:part name="nTimeout" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPoolInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:strMapRet" />
+  </wsdl:message>
+  <wsdl:message name="GetColumnsHttpGetIn">
+    <wsdl:part name="sCC" type="s:string" />
+    <wsdl:part name="sAC" type="s:string" />
+    <wsdl:part name="sDatasets" type="s:string" />
+    <wsdl:part name="sDelimited" type="s:string" />
+    <wsdl:part name="leFieldType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetColumnsHttpGetOut">
+    <wsdl:part name="Body" element="tns:strRet" />
+  </wsdl:message>
+  <wsdl:message name="GetFieldInfoHttpGetIn">
+    <wsdl:part name="sCC" type="s:string" />
+    <wsdl:part name="sAC" type="s:string" />
+    <wsdl:part name="sDatasets" type="s:string" />
+    <wsdl:part name="sFieldName" type="s:string" />
+    <wsdl:part name="eFieldInfo" type="s:string" />
+    <wsdl:part name="nTimeout" type="s:string" />
+    <wsdl:part name="sDelimited" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFieldInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:strRet" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchHttpGetIn">
+    <wsdl:part name="sCC" type="s:string" />
+    <wsdl:part name="sAC" type="s:string" />
+    <wsdl:part name="sDatasets" type="s:string" />
+    <wsdl:part name="eSearchType" type="s:string" />
+    <wsdl:part name="aSelect" type="s1:StringArray" />
+    <wsdl:part name="sDelimited" type="s:string" />
+    <wsdl:part name="aQueryString" type="s1:StringArray" />
+    <wsdl:part name="nTimeout" type="s:string" />
+    <wsdl:part name="sAppID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchHttpGetOut">
+    <wsdl:part name="Body" element="tns:strMapRet" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchStringHttpGetIn">
+    <wsdl:part name="sCC" type="s:string" />
+    <wsdl:part name="sAC" type="s:string" />
+    <wsdl:part name="sDatasets" type="s:string" />
+    <wsdl:part name="eSearchType" type="s:string" />
+    <wsdl:part name="sSelect" type="s:string" />
+    <wsdl:part name="sDelimited" type="s:string" />
+    <wsdl:part name="sQueryString" type="s:string" />
+    <wsdl:part name="nTimeout" type="s:string" />
+    <wsdl:part name="sAppID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchStringHttpGetOut">
+    <wsdl:part name="Body" element="tns:strMapRet" />
+  </wsdl:message>
+  <wsdl:message name="GetRemainingLookUpsHttpGetIn">
+    <wsdl:part name="sCC" type="s:string" />
+    <wsdl:part name="sAC" type="s:string" />
+    <wsdl:part name="sDatasets" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRemainingLookUpsHttpGetOut">
+    <wsdl:part name="Body" element="tns:strLookUps" />
+  </wsdl:message>
+  <wsdl:message name="GetParamHttpGetIn">
+    <wsdl:part name="sCC" type="s:string" />
+    <wsdl:part name="sAC" type="s:string" />
+    <wsdl:part name="sDatasets" type="s:string" />
+    <wsdl:part name="sDelimited" type="s:string" />
+    <wsdl:part name="sParamLookup" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetParamHttpGetOut">
+    <wsdl:part name="Body" element="tns:strParamsInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDatasetsHttpPostIn">
+    <wsdl:part name="cc" type="s:string" />
+    <wsdl:part name="ac" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDatasetsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DSGlist" />
+  </wsdl:message>
+  <wsdl:message name="queryHttpPostIn">
+    <wsdl:part name="cc" type="s:string" />
+    <wsdl:part name="ac" type="s:string" />
+    <wsdl:part name="AmbiguityId" type="s:string" />
+    <wsdl:part name="Lookfor" type="s:string" />
+    <wsdl:part name="MaxReturns" type="s:string" />
+    <wsdl:part name="DSGID" type="s:string" />
+    <wsdl:part name="FieldList" type="s:string" />
+    <wsdl:part name="ParamList" type="s:string" />
+    <wsdl:part name="sAppID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="queryHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResponseGrp" />
+  </wsdl:message>
+  <wsdl:message name="GetPoolInfoHttpPostIn">
+    <wsdl:part name="sCC" type="s:string" />
+    <wsdl:part name="sAC" type="s:string" />
+    <wsdl:part name="sDatasets" type="s:string" />
+    <wsdl:part name="nTimeout" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPoolInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:strMapRet" />
+  </wsdl:message>
+  <wsdl:message name="GetColumnsHttpPostIn">
+    <wsdl:part name="sCC" type="s:string" />
+    <wsdl:part name="sAC" type="s:string" />
+    <wsdl:part name="sDatasets" type="s:string" />
+    <wsdl:part name="sDelimited" type="s:string" />
+    <wsdl:part name="leFieldType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetColumnsHttpPostOut">
+    <wsdl:part name="Body" element="tns:strRet" />
+  </wsdl:message>
+  <wsdl:message name="GetFieldInfoHttpPostIn">
+    <wsdl:part name="sCC" type="s:string" />
+    <wsdl:part name="sAC" type="s:string" />
+    <wsdl:part name="sDatasets" type="s:string" />
+    <wsdl:part name="sFieldName" type="s:string" />
+    <wsdl:part name="eFieldInfo" type="s:string" />
+    <wsdl:part name="nTimeout" type="s:string" />
+    <wsdl:part name="sDelimited" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFieldInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:strRet" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchHttpPostIn">
+    <wsdl:part name="sCC" type="s:string" />
+    <wsdl:part name="sAC" type="s:string" />
+    <wsdl:part name="sDatasets" type="s:string" />
+    <wsdl:part name="eSearchType" type="s:string" />
+    <wsdl:part name="aSelect" type="s1:StringArray" />
+    <wsdl:part name="sDelimited" type="s:string" />
+    <wsdl:part name="aQueryString" type="s1:StringArray" />
+    <wsdl:part name="nTimeout" type="s:string" />
+    <wsdl:part name="sAppID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchHttpPostOut">
+    <wsdl:part name="Body" element="tns:strMapRet" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchStringHttpPostIn">
+    <wsdl:part name="sCC" type="s:string" />
+    <wsdl:part name="sAC" type="s:string" />
+    <wsdl:part name="sDatasets" type="s:string" />
+    <wsdl:part name="eSearchType" type="s:string" />
+    <wsdl:part name="sSelect" type="s:string" />
+    <wsdl:part name="sDelimited" type="s:string" />
+    <wsdl:part name="sQueryString" type="s:string" />
+    <wsdl:part name="nTimeout" type="s:string" />
+    <wsdl:part name="sAppID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchStringHttpPostOut">
+    <wsdl:part name="Body" element="tns:strMapRet" />
+  </wsdl:message>
+  <wsdl:message name="GetRemainingLookUpsHttpPostIn">
+    <wsdl:part name="sCC" type="s:string" />
+    <wsdl:part name="sAC" type="s:string" />
+    <wsdl:part name="sDatasets" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRemainingLookUpsHttpPostOut">
+    <wsdl:part name="Body" element="tns:strLookUps" />
+  </wsdl:message>
+  <wsdl:message name="GetParamHttpPostIn">
+    <wsdl:part name="sCC" type="s:string" />
+    <wsdl:part name="sAC" type="s:string" />
+    <wsdl:part name="sDatasets" type="s:string" />
+    <wsdl:part name="sDelimited" type="s:string" />
+    <wsdl:part name="sParamLookup" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetParamHttpPostOut">
+    <wsdl:part name="Body" element="tns:strParamsInfo" />
+  </wsdl:message>
+  <wsdl:portType name="CapscanOnDemandSoap">
+    <wsdl:operation name="GetDatasets">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method returns a list of the available datasets (DSGs)</wsdl:documentation>
+      <wsdl:input message="tns:GetDatasetsSoapIn" />
+      <wsdl:output message="tns:GetDatasetsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="query">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">An easy to use search method</wsdl:documentation>
+      <wsdl:input message="tns:querySoapIn" />
+      <wsdl:output message="tns:querySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPoolInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Returns a set of key/value string pairs representing the configuration parameters used in the given dataset</wsdl:documentation>
+      <wsdl:input message="tns:GetPoolInfoSoapIn" />
+      <wsdl:output message="tns:GetPoolInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColumns">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of the columns available from the given datasets</wsdl:documentation>
+      <wsdl:input message="tns:GetColumnsSoapIn" />
+      <wsdl:output message="tns:GetColumnsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFieldInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return a single piece of information for a named field from the specified datasets</wsdl:documentation>
+      <wsdl:input message="tns:GetFieldInfoSoapIn" />
+      <wsdl:output message="tns:GetFieldInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Performs a search</wsdl:documentation>
+      <wsdl:input message="tns:GetSearchSoapIn" />
+      <wsdl:output message="tns:GetSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchString">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Performs a search</wsdl:documentation>
+      <wsdl:input message="tns:GetSearchStringSoapIn" />
+      <wsdl:output message="tns:GetSearchStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemainingLookUps">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an array of licence details and remaining lookups</wsdl:documentation>
+      <wsdl:input message="tns:GetRemainingLookUpsSoapIn" />
+      <wsdl:output message="tns:GetRemainingLookUpsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParam">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return a single parameter value or All</wsdl:documentation>
+      <wsdl:input message="tns:GetParamSoapIn" />
+      <wsdl:output message="tns:GetParamSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CapscanOnDemandHttpGet">
+    <wsdl:operation name="GetDatasets">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method returns a list of the available datasets (DSGs)</wsdl:documentation>
+      <wsdl:input message="tns:GetDatasetsHttpGetIn" />
+      <wsdl:output message="tns:GetDatasetsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="query">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">An easy to use search method</wsdl:documentation>
+      <wsdl:input message="tns:queryHttpGetIn" />
+      <wsdl:output message="tns:queryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPoolInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Returns a set of key/value string pairs representing the configuration parameters used in the given dataset</wsdl:documentation>
+      <wsdl:input message="tns:GetPoolInfoHttpGetIn" />
+      <wsdl:output message="tns:GetPoolInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColumns">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of the columns available from the given datasets</wsdl:documentation>
+      <wsdl:input message="tns:GetColumnsHttpGetIn" />
+      <wsdl:output message="tns:GetColumnsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFieldInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return a single piece of information for a named field from the specified datasets</wsdl:documentation>
+      <wsdl:input message="tns:GetFieldInfoHttpGetIn" />
+      <wsdl:output message="tns:GetFieldInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Performs a search</wsdl:documentation>
+      <wsdl:input message="tns:GetSearchHttpGetIn" />
+      <wsdl:output message="tns:GetSearchHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchString">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Performs a search</wsdl:documentation>
+      <wsdl:input message="tns:GetSearchStringHttpGetIn" />
+      <wsdl:output message="tns:GetSearchStringHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemainingLookUps">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an array of licence details and remaining lookups</wsdl:documentation>
+      <wsdl:input message="tns:GetRemainingLookUpsHttpGetIn" />
+      <wsdl:output message="tns:GetRemainingLookUpsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParam">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return a single parameter value or All</wsdl:documentation>
+      <wsdl:input message="tns:GetParamHttpGetIn" />
+      <wsdl:output message="tns:GetParamHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CapscanOnDemandHttpPost">
+    <wsdl:operation name="GetDatasets">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method returns a list of the available datasets (DSGs)</wsdl:documentation>
+      <wsdl:input message="tns:GetDatasetsHttpPostIn" />
+      <wsdl:output message="tns:GetDatasetsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="query">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">An easy to use search method</wsdl:documentation>
+      <wsdl:input message="tns:queryHttpPostIn" />
+      <wsdl:output message="tns:queryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPoolInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Returns a set of key/value string pairs representing the configuration parameters used in the given dataset</wsdl:documentation>
+      <wsdl:input message="tns:GetPoolInfoHttpPostIn" />
+      <wsdl:output message="tns:GetPoolInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColumns">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of the columns available from the given datasets</wsdl:documentation>
+      <wsdl:input message="tns:GetColumnsHttpPostIn" />
+      <wsdl:output message="tns:GetColumnsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFieldInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return a single piece of information for a named field from the specified datasets</wsdl:documentation>
+      <wsdl:input message="tns:GetFieldInfoHttpPostIn" />
+      <wsdl:output message="tns:GetFieldInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Performs a search</wsdl:documentation>
+      <wsdl:input message="tns:GetSearchHttpPostIn" />
+      <wsdl:output message="tns:GetSearchHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchString">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Performs a search</wsdl:documentation>
+      <wsdl:input message="tns:GetSearchStringHttpPostIn" />
+      <wsdl:output message="tns:GetSearchStringHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemainingLookUps">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an array of licence details and remaining lookups</wsdl:documentation>
+      <wsdl:input message="tns:GetRemainingLookUpsHttpPostIn" />
+      <wsdl:output message="tns:GetRemainingLookUpsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParam">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return a single parameter value or All</wsdl:documentation>
+      <wsdl:input message="tns:GetParamHttpPostIn" />
+      <wsdl:output message="tns:GetParamHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CapscanOnDemandSoap" type="tns:CapscanOnDemandSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDatasets">
+      <soap:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/GetDatasets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="query">
+      <soap:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/query" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPoolInfo">
+      <soap:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/GetPoolInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColumns">
+      <soap:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/GetColumns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFieldInfo">
+      <soap:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/GetFieldInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearch">
+      <soap:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/GetSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchString">
+      <soap:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/GetSearchString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemainingLookUps">
+      <soap:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/GetRemainingLookUps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParam">
+      <soap:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/GetParam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CapscanOnDemandSoap12" type="tns:CapscanOnDemandSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDatasets">
+      <soap12:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/GetDatasets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="query">
+      <soap12:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/query" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPoolInfo">
+      <soap12:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/GetPoolInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColumns">
+      <soap12:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/GetColumns" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFieldInfo">
+      <soap12:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/GetFieldInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearch">
+      <soap12:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/GetSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchString">
+      <soap12:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/GetSearchString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemainingLookUps">
+      <soap12:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/GetRemainingLookUps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParam">
+      <soap12:operation soapAction="http://www.capscanondemand.com/CapscanOnDemand/CapscanOnDemand/GetParam" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CapscanOnDemandHttpGet" type="tns:CapscanOnDemandHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetDatasets">
+      <http:operation location="/GetDatasets" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="query">
+      <http:operation location="/query" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPoolInfo">
+      <http:operation location="/GetPoolInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColumns">
+      <http:operation location="/GetColumns" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFieldInfo">
+      <http:operation location="/GetFieldInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearch">
+      <http:operation location="/GetSearch" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchString">
+      <http:operation location="/GetSearchString" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemainingLookUps">
+      <http:operation location="/GetRemainingLookUps" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParam">
+      <http:operation location="/GetParam" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CapscanOnDemandHttpPost" type="tns:CapscanOnDemandHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetDatasets">
+      <http:operation location="/GetDatasets" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="query">
+      <http:operation location="/query" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPoolInfo">
+      <http:operation location="/GetPoolInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColumns">
+      <http:operation location="/GetColumns" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFieldInfo">
+      <http:operation location="/GetFieldInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearch">
+      <http:operation location="/GetSearch" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchString">
+      <http:operation location="/GetSearchString" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemainingLookUps">
+      <http:operation location="/GetRemainingLookUps" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParam">
+      <http:operation location="/GetParam" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CapscanOnDemand">
+    <wsdl:port name="CapscanOnDemandSoap" binding="tns:CapscanOnDemandSoap">
+      <soap:address location="http://www.capscanondemand.com/capscanondemand/capscanondemand.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CapscanOnDemandSoap12" binding="tns:CapscanOnDemandSoap12">
+      <soap12:address location="http://www.capscanondemand.com/capscanondemand/capscanondemand.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CapscanOnDemandHttpGet" binding="tns:CapscanOnDemandHttpGet">
+      <http:address location="http://www.capscanondemand.com/capscanondemand/capscanondemand.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CapscanOnDemandHttpPost" binding="tns:CapscanOnDemandHttpPost">
+      <http:address location="http://www.capscanondemand.com/capscanondemand/capscanondemand.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

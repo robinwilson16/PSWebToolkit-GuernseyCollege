@@ -1,0 +1,139 @@
+<%@ Master Language="VB" CodeFile="UserControlMasterPage.master.vb" Inherits="UserControlMasterPage" %>
+
+<%@ Register Assembly="PSWebEnrolmentKit" Namespace="CompassCC.ProSolution.PSWebEnrolmentKit"
+    TagPrefix="cc1" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server" id="header">
+    <meta name="description" content="Compass College Online -  In Helsby" />
+    <meta name="keywords" content="For all your training needs" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="language" content="en" />
+    <meta name="document-type" content="Public" />
+    <meta name="country" content="uk" />
+    <meta name="url" content="http://www.compasscc.com" />
+    <meta name="copyright" content="&copy; Copyright 2014 - Compass" />
+    <meta name="creator" content="Compass" />
+    <title>Advanced Online Enrolment &amp; Applications</title> 
+
+</head>
+<body id="body" runat="server">
+    <form id="form1" runat="server">
+        <div class="container White mt-4">
+            <div class="row">
+                <div class="col-md text-center TopLogo mt-4">
+                    <img src="images/TheGuernseyInstitute.png" class="img-fluid" alt="The Guernsey Institute" />
+                </div>
+            </div>
+            <%--<div class="row">
+                <div class="col-md text-end">
+                    <img src="images/TGICollege.png" class="img-fluid" alt="TGI College" />
+                </div>
+            </div>--%>
+        </div>
+
+       <%-- <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">PSWebEnrolment</a>
+    </div>
+
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                       <ul class="nav navbar-nav">
+         <li><a href="webenrolment.aspx?page=~/webcontrols/searchnew.ascx" >Search</a></li>
+ <li>
+                            <span class="glyphicon glyphicon-shopping-cart" style="padding:15px;"></span><cc1:ShoppingBasketTotals ID="ShoppingBasketTotals1" runat="server" ClientIDMode="Static" HideIcon="true" CssClass="shoppingbasket" />
+                        </li>
+                      <li>
+                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/webenrolment.aspx?page=~/webcontrols/help.ascx">Help</asp:HyperLink></li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="webenrolment.aspx?page=~/webcontrols/contact.ascx">Contact us</asp:HyperLink></li>
+
+                           </ul>
+
+                      <div id="regLoggedIn" class="nav navbar-nav navbar-right" runat="server" ClientIDMode="Static">
+                        <ul class="nav navbar-nav">                          
+                            <li><p runat="server" ID="username" style="color:#999;padding-top:15px" ClientIDMode="Static"/></li>                        
+                            <li><asp:HyperLink ID="lnkAccount" runat="server" ClientIDMode="Static" NavigateUrl="webenrolment.aspx?page=~/account/ccc/UserAccount.ascx">My Account</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="lnkLogout" runat="server" ClientIDMode="Static" NavigateUrl="webenrolment.aspx?page=~/account/ccc/Logout.ascx">Log out</asp:HyperLink></li>
+                        </ul>
+                    </div>
+					 <div id="regLinks" class="nav navbar-nav navbar-right" runat="server" ClientIDMode="Static">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <asp:HyperLink ID="lnkRegister" runat="server" ClientIDMode="Static" NavigateUrl="webenrolment.aspx?page=~/account/ccc/Register.ascx" Style="color: #999; padding: 15px; height: 50px">Register</asp:HyperLink></li>
+                            <li>
+                                <asp:HyperLink ID="lnkLogin" runat="server" ClientIDMode="Static" NavigateUrl="webenrolment.aspx?page=~/account/ccc/Login.ascx" Style="color: #999; padding: 15px; height: 50px">Login</asp:HyperLink>
+
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
+                  </div>
+            </nav>
+        <div style='display: none;'>
+            Style sheets must be enabled to view this page as it was intended.
+        </div>--%>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md White">
+                    <div class="body-content" id="content">                        
+                        <asp:ContentPlaceHolder ID="MainContentPlaceholder" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md text-center">
+                    <footer class="footer text-muted">
+                        <p>&copy; The Guernsey Institute 2023-2024</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+  <%--  <nav class="navbar navbar-default navbar-fixed-bottom" style="background-color: transparent;">
+       
+     
+        <div class="nav navbar-collapse" id="navenrols" runat="server">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Skip to Page... <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/searchnew.ascx">Search</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_enrolments.ascx">Personal Details</a></li>
+                       
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_enrolments2.ascx">Further Details</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_parent_guardian.ascx">Parent / Guardian</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_other_contacts.ascx">Other Contacts</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_school_employer.ascx">School / Employer</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_prior_attainment.ascx">Prior Attainment</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_quals_on_entry.ascx">Quals on Entry</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_references.ascx">References</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_employment.ascx">Employment</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_attachments.ascx">Attachments</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_dataprotection.ascx">Declaration</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>--%>
+
+</body>
+</html>

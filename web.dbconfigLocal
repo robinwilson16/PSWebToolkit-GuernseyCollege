@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    <add key="Connection.DefaultLogicalDatabase" value="PSWebEnrolment" /> 
+    <!--NOTE: Timeout values are in seconds-->
+    <add key="Connection.DefaultTimeout" value="60" />
+    <add key="Connection.DefaultLongTimeout" value="3600" />
+    <add key="Connection.PSWebEnrolment.Server" value="(local)" /> 
+    <add key="Connection.PSWebEnrolment.Database" value="PSWebEnrolment" />
+    <add key="Connection.PSWebEnrolment.TrustedConnection" value="False" />
+    <add key="Connection.ProSolution.Server" value="(local)" />
+    <add key="Connection.ProSolution.Database" value="ProSolution" />
+    <add key="Connection.ProSolution.TrustedConnection" value="False" />
+    <!--PSWebEnrolmentReference-->
+    <add key="Connection.PSWebEnrolmentReference.Server" value="(local)" />
+    <add key="Connection.PSWebEnrolmentReference.Database" value="PSWebEnrolmentReference" />
+    <add key="Connection.PSWebEnrolmentReference.TrustedConnection" value="False" />
+
+
+  </appSettings>
+</configuration> 

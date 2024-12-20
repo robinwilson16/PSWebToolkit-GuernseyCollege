@@ -1,0 +1,15 @@
+﻿
+.label2 {
+    display: inline-block;
+    width: 200px;
+}
+
+#ctl00_MainContentPlaceholder_ctl00_errtext {
+    color: red;
+}
+
+#lnkReSend, #lnkReset {
+    color: #999;
+    padding: 15px;
+    height: 50px;
+}
