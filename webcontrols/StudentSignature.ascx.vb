@@ -19,7 +19,8 @@ Partial Class webcontrols_StudentSignature
                 Dim mySVG As SvgDocument
                 Dim newStream As New MemoryStream(ASCIIEncoding.[Default].GetBytes(strSVG))
 
-                mySVG = SvgDocument.Open(Of SvgDocument)(newStream, Nothing)
+                Dim svgOptions As New SvgOptions
+                mySVG = SvgDocument.Open(Of SvgDocument)(newStream, svgOptions)
 
                 Dim tempStream As New MemoryStream()
                 mySVG.Draw().Save(tempStream, ImageFormat.Png)

@@ -171,7 +171,7 @@ Partial Class UserControlMasterPage
 
         Dim jsGetAddress As New HtmlGenericControl("script")
         jsGetAddress.Attributes("type") = "text/javascript"
-        jsGetAddress.Attributes("src") = ResolveUrl("https://cdn.getaddress.io/scripts/getaddress-autocomplete-native-1.0.2.min.js")
+        jsGetAddress.Attributes("src") = ResolveUrl("https://cdn.getaddress.io/scripts/getaddress-autocomplete-2.1.1.min.js")
         htmlHeader.Controls.Add(jsGetAddress)
 
         Dim jsGCFE As New HtmlGenericControl("script")

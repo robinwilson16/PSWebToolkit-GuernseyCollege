@@ -252,54 +252,44 @@
         }
 
         // Get Address IO
+        let fldAddress4 = document.getElementById(`txtAddress4`);
         let fldPostCode = document.getElementById(`postcode`);
         document.addEventListener("getaddress-autocomplete-suggestions", function (e) {
             console.log(e.suggestions);
-        });
+        })
 
         document.addEventListener("getaddress-autocomplete-suggestions-failed", function (e) {
             console.log(e.status);
             console.log(e.message);
-        });
+        })
 
         document.addEventListener("getaddress-autocomplete-address-selected", function (e) {
             console.log(e.address);
 
-            fldPostCode.dispatchEvent(postCodeKeyup); //Can call a custon function after selection
-        });
+            fldPostCode.dispatchEvent(postCodeKeyup); //Can call a custom function after selection
+            fldAddress4.dispatchEvent(address4Change);
+        })
 
         document.addEventListener("getaddress-autocomplete-address-selected-failed", function (e) {
             console.log(e.status);
             console.log(e.message);
-        });
+        })
 
-        getAddress.autocomplete(
+        const autocomplete = getAddress.autocomplete(
             'txtAddress1',
-            //'ROVbeBy1-0yONiM6WBChSA42153',
-            '45VgWReQcEaaPAtheoJfYg42377',
-            /*options*/{
-                output_fields: {
-                    formatted_address_0: 'txtAddress1',  /* The id of the element bound to 'formatted_address[0]' */
-                    formatted_address_1: 'txtAddress2',
-                    town_or_city: 'txtAddress3',  /* The id of the element bound to 'town_or_city' */
-                    county: 'txtAddress4',  /* The id of the element bound to 'county' */
-                    country: 'txtCountry',  /* The id of the element bound to 'country' */
-                    postcode: 'postcode'  /* The id of the element bound to 'postcode' */
-                },
-                id_prefix: 'getAddress-autocomplete-native',  /* The id of the textbox and list container */
-                delay: 200, /* millisecond delay between keypress and API call */
-                minimum_characters: 2,  /* minimum characters to initiate an API call */
-                select_on_focus: true,  /* if true, highlights textbox characters on focus*/
-                alt_autocomplete_url: undefined,  /* alterative local autocomplete URL (when API key is not used) */
-                alt_get_url: undefined,  /* alterative local get URL (when API key is not used) */
-                suggestion_count: 6, /* number of retreived suggestions (max 20) */
-                filter: undefined, /* the suggestion filter (see Autocomplete API)*/
-                bind_output_fields: true, /* if true, bind the output_fields to the address*/
-                input_focus_on_select: true,  /* if true, sets the focus to the textbox after selecting an address*/
-                debug: false, /* if true, logs behavior */
-                enable_get: true /* if true, retreives address on select */
-            }
+            //'ROVbeBy1-0yONiM6WBChSA42153'
+            '45VgWReQcEaaPAtheoJfYg42377'
         );
+
+        autocomplete.addEventListener("getaddress-autocomplete-address-selected", function (e) {
+            document.getElementById('txtAddress1').value = e.address.formatted_address[0];
+            document.getElementById('txtAddress2').value = e.address.formatted_address[1];
+            document.getElementById('txtAddress3').value = e.address.formatted_address[2];
+            document.getElementById('txtAddress4').value = e.address.formatted_address[3];
+            document.getElementById('txtCountry').value = e.address.formatted_address[4];
+            document.getElementById('postcode').value = e.address.postcode;
+        })
+
 
         //Get Address IO --Overwrite country from Channel Islands to Guernsey so Country Drop-Down Will Select This Option Otherwise Populate with Selected Country If In List
         let postCodeKeyup = new Event('keyup');
@@ -316,6 +306,16 @@
             }
             else {
                 fldCountry.dispatchEvent(changeEvent);
+            }
+        });
+
+        let address4Change = new Event('change');
+
+        fldAddress4.addEventListener(`change`, function (event) {
+            let fldAddress4Value = fldAddress4.value;
+
+            if (fldAddress4Value.includes(", Guernsey")) {
+                fldAddress4.value = fldAddress4Value.replace(", Guernsey", "");
             }
         });
 

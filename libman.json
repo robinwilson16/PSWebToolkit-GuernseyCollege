@@ -3,27 +3,27 @@
   "defaultProvider": "cdnjs",
   "libraries": [
     {
-      "library": "jquery@3.6.4",
+      "library": "jquery@3.7.1",
       "destination": "Scripts/jquery/"
     },
     {
-      "library": "jqueryui@1.13.2",
+      "library": "jqueryui@1.14.1",
       "destination": "Scripts/jquery-ui/"
     },
     {
-      "library": "twitter-bootstrap@5.3.0-alpha3",
+      "library": "twitter-bootstrap@5.3.3",
       "destination": "Scripts/bootstrap/"
     },
     {
-      "library": "font-awesome@6.4.0",
+      "library": "font-awesome@6.7.2",
       "destination": "Scripts/font-awesome/"
     },
     {
-      "library": "moment.js@2.29.4",
+      "library": "moment.js@2.30.1",
       "destination": "Scripts/momentjs/"
     },
     {
-      "library": "marked@4.3.0",
+      "library": "marked@15.0.6",
       "destination": "Scripts/marked/"
     },
     {

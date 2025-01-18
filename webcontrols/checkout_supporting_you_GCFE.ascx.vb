@@ -193,7 +193,7 @@ Partial Class webcontrols_checkout_supporting_you_GCFE
         End If
 
         'Added redirect otherwise session variable was still showing old value
-        Response.Redirect(GetResourceValue("checkout_enrolments2_FE_aspx"))
+        Response.Redirect(GetResourceValue("checkout_supporting_you_GCFE_aspx"))
     End Sub
 
     Public Overrides Sub ValidateControl()
